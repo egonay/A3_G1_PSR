@@ -32,7 +32,7 @@ class PasswordGenerator
     /**
      * @var int
      */
-    private static $passwordDefaultLenght = 10;
+    private static $passwordDefaultLength = 10;
     /**
      * @param null $number
      * @param int $strength
@@ -47,11 +47,8 @@ class PasswordGenerator
             self::PASSWORD_HARD,
         ]))
             throw new \Exception('Bad strength!');
-
-        $length = (null === $number) ? self::$passwordDefaultLenght : (0 === (int)$number) ? self::$passwordDefaultLenght : (int)$number;
-
+        $length = (null === $number) ? self::$passwordDefaultLength : (0 === (int)$number) ? self::$passwordDefaultLength : (int)$number;
         $password = $char = '';
-
         switch ($strength) {
             case self::PASSWORD_EASY:
                 $char = self::$passwordCharEasy;
