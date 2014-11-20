@@ -14,17 +14,8 @@ namespace Web1\StringGenerator;
  */
 class PasswordGenerator
 {
-    /**
-     *
-     */
     const PASSWORD_EASY   = 0;
-    /**
-     *
-     */
     const PASSWORD_MEDIUM = 1;
-    /**
-     *
-     */
     const PASSWORD_HARD   = 2;
 
     /**
@@ -53,14 +44,14 @@ class PasswordGenerator
      */
     public static  function getRandomString($number = null, $strength = self::PASSWORD_MEDIUM)
     {
-        if (!in_array($strength, [
+        if (false === in_array($strength, [
             self::PASSWORD_EASY,
             self::PASSWORD_MEDIUM,
             self::PASSWORD_HARD,
         ]))
             throw new \Exception('Bad strength!');
 
-        $length = (is_null($number))
+        $length   = (null === $number) //aligner les "egal" pour eviter les conflits avec scrutinizer
             ? self::$passwordDefaultLenght
             : (0 === (int)$number)
                 ? self::$passwordDefaultLenght
@@ -82,7 +73,6 @@ class PasswordGenerator
         for ($i = 0; $i < $length; $i++) {
             $password .= mb_substr($char, mt_rand(0, (mb_strlen($char)-1)), 1);
         }
-
         return $password;
     }
 }
