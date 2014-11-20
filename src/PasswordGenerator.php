@@ -17,7 +17,6 @@ class PasswordGenerator
     const PASSWORD_EASY   = 0;
     const PASSWORD_MEDIUM = 1;
     const PASSWORD_HARD   = 2;
-
     /**
      * @var string
      */
@@ -34,8 +33,6 @@ class PasswordGenerator
      * @var int
      */
     private static $passwordDefaultLenght = 10;
-
-
     /**
      * @param null $number
      * @param int $strength
@@ -51,11 +48,7 @@ class PasswordGenerator
         ]))
             throw new \Exception('Bad strength!');
 
-        $length   = (null === $number) //aligner les "egal" pour eviter les conflits avec scrutinizer
-            ? self::$passwordDefaultLenght
-            : (0 === (int)$number)
-                ? self::$passwordDefaultLenght
-                : (int)$number;
+        $length = (null === $number) ? self::$passwordDefaultLenght : (0 === (int)$number) ? self::$passwordDefaultLenght : (int)$number;
 
         $password = $char = '';
 
@@ -71,7 +64,7 @@ class PasswordGenerator
                 break;
         }
         for ($i = 0; $i < $length; $i++) {
-            $password .= mb_substr($char, mt_rand(0, (mb_strlen($char)-1)), 1);
+            $password .= mb_substr($char, mt_rand(0, (mb_strlen($char) - 1)), 1);
         }
         return $password;
     }
