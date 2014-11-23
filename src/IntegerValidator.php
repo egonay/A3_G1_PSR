@@ -30,4 +30,14 @@ class IntegerValidator
             return false;
         }
     }
+
+    public static function less($integer, $test)
+    {
+        if ($integer < $test)
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
 } 

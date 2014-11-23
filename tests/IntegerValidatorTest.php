@@ -33,4 +33,12 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($result);
     }
+
+    public function testIntegerValidatorLessFalse()
+    {
+        $test = 8;
+        $result = IntegerValidator::less(19, $test);
+
+        $this->assertFalse($result);
+    }
 } 
