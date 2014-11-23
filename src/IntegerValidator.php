@@ -40,4 +40,14 @@ class IntegerValidator
             return false;
         }
     }
+
+    public static function between($integer, $test, $test2)
+    {
+        if ($test < $integer && $integer < $test2)
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
 } 

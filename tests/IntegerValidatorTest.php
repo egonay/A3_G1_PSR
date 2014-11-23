@@ -41,4 +41,13 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($result);
     }
+
+    public function testIntegerValidatorBetweenFalse()
+    {
+        $test = 30;
+        $test2 = 45;
+        $result = IntegerValidator::between(56, $test, $test2);
+
+        $this->assertFalse($result);
+    }
 } 
