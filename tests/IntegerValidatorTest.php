@@ -24,4 +24,12 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($result);
     }
+
+    public function testIntegerValidatorAboveFalse()
+    {
+        $test = 8;
+        $result = IntegerValidator::above($test, 5);
+
+        $this->assertFalse($result);
+    }
 } 

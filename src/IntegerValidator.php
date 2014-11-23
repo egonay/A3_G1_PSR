@@ -19,6 +19,15 @@ class IntegerValidator
         } else {
             return false;
         }
+    }
 
+    public static function above($integer, $test)
+    {
+        if ($integer > $test)
+        {
+            return true;
+        } else {
+            return false;
+        }
     }
 } 
