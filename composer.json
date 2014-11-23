@@ -8,8 +8,8 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Web1\\StringGenerator\\": "src",
-      "Tests\\Web1\\StringGenerator\\": "tests"
+      "Php\\Validator\\": "src",
+      "Tests\\Php\\Validator\\": "tests"
     }
   },
   "config": {
