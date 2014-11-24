@@ -16,8 +16,6 @@ class IntegerValidator
         if ($integer === $test)
         {
             return true;
-        } else {
-            return false;
         }
     }
 
@@ -26,8 +24,6 @@ class IntegerValidator
         if ($integer > $test)
         {
             return true;
-        } else {
-            return false;
         }
     }
 
@@ -36,8 +32,6 @@ class IntegerValidator
         if ($integer < $test)
         {
             return true;
-        } else {
-            return false;
         }
     }
 
@@ -46,8 +40,6 @@ class IntegerValidator
         if ($test < $integer && $integer < $test2)
         {
             return true;
-        } else {
-            return false;
         }
     }
 
@@ -56,8 +48,6 @@ class IntegerValidator
         if ($test <= 0)
         {
             return true;
-        } else {
-            return false;
         }
     }
 
@@ -66,8 +56,6 @@ class IntegerValidator
         if ($test >= 0)
         {
             return true;
-        } else {
-            return false;
         }
     }
 } 
