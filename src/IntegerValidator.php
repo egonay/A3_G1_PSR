@@ -50,4 +50,14 @@ class IntegerValidator
             return false;
         }
     }
+
+    public static function lessThanOrEqualTo($test)
+    {
+        if ($test <= 0)
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
 } 
