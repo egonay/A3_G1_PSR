@@ -60,4 +60,14 @@ class IntegerValidator
             return false;
         }
     }
+
+    public static function moreThanOrEqualTo($test)
+    {
+        if ($test >= 0)
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
 } 

@@ -58,4 +58,12 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($result);
     }
+
+    public function testIntegerValidatorMoreThanOrEqualTo()
+    {
+        $test = -2;
+        $result = IntegerValidator::moreThanOrEqualTo($test);
+
+        $this->assertFalse($result);
+    }
 } 
