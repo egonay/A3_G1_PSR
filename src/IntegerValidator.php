@@ -11,12 +11,12 @@ namespace Php\Validator;
 
 class IntegerValidator
 {
-    public static function equal($integer, $test)
-    {
+    public static function equal($integer, $test){
         if ($integer === $test)
         {
             return true;
         }
+        return false;
     }
 
     public static function above($integer, $test)
@@ -25,6 +25,7 @@ class IntegerValidator
         {
             return true;
         }
+        return false;
     }
 
     public static function less($integer, $test)
@@ -33,6 +34,7 @@ class IntegerValidator
         {
             return true;
         }
+        return false;
     }
 
     public static function between($integer, $test, $test2)
@@ -41,6 +43,7 @@ class IntegerValidator
         {
             return true;
         }
+        return false;
     }
 
     public static function lessThanOrEqualTo($test)
@@ -49,6 +52,7 @@ class IntegerValidator
         {
             return true;
         }
+        return false;
     }
 
     public static function moreThanOrEqualTo($test)
@@ -57,5 +61,6 @@ class IntegerValidator
         {
             return true;
         }
+        return false;
     }
 } 
