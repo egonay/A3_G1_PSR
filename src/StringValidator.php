@@ -33,7 +33,13 @@ class StringValidator
 
     public static function noSpaceAtBeginningAndEnd($string)
     {
-        $string2 = trim($string, " ");
+        $string2 = trim($string, ' ');
+        return $string === $string2;
+    }
+
+    public static function noSpaceAtAll($string)
+    {
+        $string2 = trim($string);
         return $string === $string2;
     }
 }

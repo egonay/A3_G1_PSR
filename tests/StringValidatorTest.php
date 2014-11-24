@@ -48,7 +48,14 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
 
     public function testNoSpaceAtBeginningAndEnd()
     {
-        $result = StringValidator::noSpaceAtBeginningAndEnd("Bonjour tout le monde!");
+        $result = StringValidator::noSpaceAtBeginningAndEnd(" Bonjour tout le monde! ");
+
+        $this->assertFalse($result);
+    }
+
+    public function testNoSpaceAtAll()
+    {
+        $result = StringValidator::noSpaceAtAll("Bonjour tout le monde!");
 
         $this->assertFalse($result);
     }
