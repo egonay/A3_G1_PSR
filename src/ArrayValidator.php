@@ -14,4 +14,39 @@ class ArrayValidator
     public static function isEmpty($array){
         return empty($array);
     }
+
+    public static function isEqual($array, $test)
+    {
+        return count($array) === $test;
+    }
+
+    public static function isAbove($array, $test)
+    {
+        return count($array) > $test;
+    }
+
+    public static function isAboveOrEqual($array, $test)
+    {
+        return count($array) >= $test;
+    }
+
+    public static function isLess($array, $test)
+    {
+        return count($array) < $test;
+    }
+
+    public static function isLessOrEqual($array, $test)
+    {
+        return count($array) <= $test;
+    }
+
+    public static function isBetween($array, $test, $test2)
+    {
+        return $test < count($array) && count($array) < $test2;
+    }
+
+    public static function keyExists($array, $key)
+    {
+        return array_key_exists($key, $array) === true;
+    }
 } 
