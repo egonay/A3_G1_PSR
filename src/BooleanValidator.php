@@ -11,11 +11,11 @@ namespace Php\Validator;
 
 class BooleanValidator
 {
-    public static function isTrue($boolean){
+    public static function isTrue(){
         return $boolean = true;
     }
 
-    public static function isFalse($boolean){
+    public static function isFalse(){
         return $boolean = true;
     }
 } 

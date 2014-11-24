@@ -11,18 +11,40 @@ namespace Tests\Php\Validator;
 use Php\Validator\BooleanValidator;
 
 
+/**
+ * Class BooleanValidatorTest
+ * @package Tests\Php\Validator
+ */
 class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
 {
-    public function testBooleanValidatorIsTrue()
+    public function testBooleanValidatorIsTrueTrue()
     {
-        $result = BooleanValidator::isTrue(false);
+        $boolean = true;
+        $result = BooleanValidator::isTrue($boolean);
+
+        $this->assertTrue($result);
+    }
+
+    public function testBooleanValidatorIsTrueFalse()
+    {
+        $boolean = false;
+        $result = BooleanValidator::isTrue($boolean);
 
         $this->assertFalse($result);
     }
 
-    public function testBooleanValidatorIsFalse()
+    public function testBooleanValidatorIsFalseTrue()
     {
-        $result = BooleanValidator::isFalse(false);
+        $boolean = true;
+        $result = BooleanValidator::isFalse($boolean);
+
+        $this->assertTrue($result);
+    }
+
+    public function testBooleanValidatorIsFalseFalse()
+    {
+        $boolean = false;
+        $result = BooleanValidator::isFalse($boolean);
 
         $this->assertFalse($result);
     }
