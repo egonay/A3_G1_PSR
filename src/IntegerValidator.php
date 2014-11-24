@@ -12,11 +12,7 @@ namespace Php\Validator;
 class IntegerValidator
 {
     public static function equal($integer, $test){
-        if ($integer === $test)
-        {
-            return true;
-        }
-        return false;
+        return $integer === $test;
     }
 
     public static function above($integer, $test)
