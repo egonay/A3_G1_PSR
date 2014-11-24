@@ -52,7 +52,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
     public function testStringValidatorLengthIsLessThanTrue()
     {
         $test = 78;
-        $result = StringValidator::lengthIsMoreThan("Bonjour tout le monde!", $test);
+        $result = StringValidator::lengthIsLessThan("Bonjour tout le monde!", $test);
 
         $this->assertTrue($result);
     }
@@ -60,7 +60,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
     public function testStringValidatorLengthIsLessThanFalse()
     {
         $test = 5;
-        $result = StringValidator::lengthIsMoreThan("Bonjour tout le monde!", $test);
+        $result = StringValidator::lengthIsLessThan("Bonjour tout le monde!", $test);
 
         $this->assertFalse($result);
     }
@@ -106,8 +106,8 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase
 
     public function testNoSpaceAtAllFalse()
     {
-        $result = StringValidator::noSpaceAtAll("Bonjour tout le monde!");
+        $result = StringValidator::noSpaceAtAll(" Bonjour tout le monde! ");
 
         $this->assertFalse($result);
     }
-} 
+}
