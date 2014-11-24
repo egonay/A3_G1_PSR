@@ -81,7 +81,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     public function testIsAboveOrEqualFalse()
     {
         $array = array("Hello", "World");
-        $test = 1;
+        $test = 5;
         $result = ArrayValidator::isAboveOrEqual($array, $test);
 
         $this->assertFalse($result);
@@ -99,7 +99,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     public function testIsLessFalse()
     {
         $array = array("Hello", "World");
-        $test = 3;
+        $test = 1;
         $result = ArrayValidator::isLess($array, $test);
 
         $this->assertFalse($result);
@@ -117,7 +117,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     public function testIsLessOrEqualFalse()
     {
         $array = array("Hello", "World");
-        $test = 3;
+        $test = 1;
         $result = ArrayValidator::isLessOrEqual($array, $test);
 
         $this->assertFalse($result);
@@ -143,20 +143,36 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($result);
     }
 
-    public function testkeyExistsTrue()
+    public function testKeyExistsTrue()
     {
         $array = array("Hello", "World");
-        $key = "World";
-        $result = ArrayValidator::keyExists($array, $key);
+        $result = ArrayValidator::keyExists("World", $array);
 
         $this->assertTrue($result);
     }
 
-    public function testkeyExistsFalse()
+    public function testKeyExistsFalse()
     {
         $array = array("Hello", "World");
         $key = "coucou";
         $result = ArrayValidator::keyExists($array, $key);
+
+        $this->assertFalse($result);
+    }
+
+    public function testElementIsIntabTrue()
+    {
+        $array = array("Hello", "World");
+        $result = ArrayValidator::elementIsIntab("World", $array);
+
+        $this->assertTrue($result);
+    }
+
+    public function testElementIsIntabFalse()
+    {
+        $array = array("Hello", "World");
+        $key = "coucou";
+        $result = ArrayValidator::elementIsIntab($array, $key);
 
         $this->assertFalse($result);
     }

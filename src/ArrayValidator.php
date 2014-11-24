@@ -45,8 +45,13 @@ class ArrayValidator
         return $test < count($array) && count($array) < $test2;
     }
 
-    public static function keyExists($array, $key)
+    public static function keyExists($key, $array)
     {
         return array_key_exists($key, $array) === true;
+    }
+
+    public static function elementIsInTab($test, $array)
+    {
+        return in_array($test, $array) === true;
     }
 } 
