@@ -17,46 +17,26 @@ class IntegerValidator
 
     public static function above($integer, $test)
     {
-        if ($integer > $test)
-        {
-            return true;
-        }
-        return false;
+        return $integer > $test;
     }
 
     public static function less($integer, $test)
     {
-        if ($integer < $test)
-        {
-            return true;
-        }
-        return false;
+        return $integer < $test;
     }
 
     public static function between($integer, $test, $test2)
     {
-        if ($test < $integer && $integer < $test2)
-        {
-            return true;
-        }
-        return false;
+        return $test < $integer && $integer < $test2;
     }
 
     public static function lessThanOrEqualTo($test)
     {
-        if ($test <= 0)
-        {
-            return true;
-        }
-        return false;
+        return $test <= 0;
     }
 
     public static function moreThanOrEqualTo($test)
     {
-        if ($test >= 0)
-        {
-            return true;
-        }
-        return false;
+        return $test >= 0;
     }
 } 
