@@ -148,8 +148,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
     public function testKeyExistsTrue()
     {
         $array = array("Hello", "World");
-        $key = "World";
-        $result = ArrayValidator::keyExists($key, $array);
+        $result = ArrayValidator::keyExists("Hello", $array);
 
         $this->assertTrue($result);
     }
@@ -163,7 +162,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($result);
     }
 
-    public function testElementIsIntabTrue()
+    public function testElementIsInTabTrue()
     {
         $array = array("Hello", "World");
         $result = ArrayValidator::elementIsIntab("World", $array);
@@ -171,11 +170,10 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($result);
     }
 
-    public function testElementIsIntabFalse()
+    public function testElementIsInTabFalse()
     {
         $array = array("Hello", "World");
-        $key = "coucou";
-        $result = ArrayValidator::elementIsIntab($array, $key);
+        $result = ArrayValidator::elementIsIntab("coucou", $array);
 
         $this->assertFalse($result);
     }
