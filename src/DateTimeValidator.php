@@ -22,4 +22,9 @@ class DateTimeValidator extends DateTime
     {
         return $datetime === $test;
     }
-} 
+
+    public static function isAbove($datetime, $test)
+    {
+        return $datetime > $test;
+    }
+}

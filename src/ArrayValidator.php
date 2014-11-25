@@ -54,4 +54,4 @@ class ArrayValidator
     {
         return in_array($test, $array) === true;
     }
-} 
+}
