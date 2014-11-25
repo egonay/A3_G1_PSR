@@ -32,4 +32,20 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($result);
     }
+
+    public function testDateTimeValidatorIsRightDateTrue()
+    {
+        $datetime = "2014-11-24";
+        $result = DateTimeValidator::isRightDate($datetime, "2014-11-24");
+
+        $this->assertTrue($result);
+    }
+
+    public function testDateTimeValidatorIsRightDateFalse()
+    {
+        $datetime = "2014-11-24";
+        $result = DateTimeValidator::isrightDate($datetime, "2014-11-16");
+
+        $this->assertFalse($result);
+    }
 } 

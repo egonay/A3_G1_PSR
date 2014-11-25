@@ -17,4 +17,9 @@ class DateTimeValidator extends DateTime
         $datetime = DateTime::createFromFormat('Y-m-d', $date);
         return $datetime && $datetime->format('Y-m-d') == $date;
     }
+
+    public static function isRightDate($datetime, $test)
+    {
+        return $datetime === $test;
+    }
 } 
