@@ -16,55 +16,61 @@ namespace Php\Validator;
 class IntegerValidator
 {
     /**
-     * @param $integer
-     * @param $test
+     * @param int $integer
+     * @param int $test
      * @return bool
      */
-    public static function equal($integer, $test) {
+    public static function equal($integer, $test)
+    {
         return $integer === $test;
     }
 
     /**
-     * @param $integer
-     * @param $test
+     * @param int $integer
+     * @param int $test
      * @return bool
      */
-    public static function above($integer, $test) {
+    public static function above($integer, $test)
+    {
         return $integer > $test;
     }
 
     /**
-     * @param $integer
-     * @param $test
+     * @param int $integer
+     * @param int $test
      * @return bool
      */
-    public static function less($integer, $test) {
+    public static function less($integer, $test)
+    {
         return $integer < $test;
     }
 
     /**
-     * @param $integer
-     * @param $test
-     * @param $test2
+     * @param int $integer
+     * @param int $test
+     * @param int $test2
      * @return bool
      */
-    public static function between($integer, $test, $test2) {
+    public static function between($integer, $test, $test2)
+    {
         return $test < $integer && $integer < $test2;
     }
 
     /**
-     * @param $test
+     * @param int $test
      * @return bool
      */
-    public static function lessThanOrEqualTo($test) {
+    public static function lessThanOrEqualTo($test)
+    {
         return $test <= 0;
     }
 
     /**
-     * @param $test
+     * @param int $test
      * @return bool
      */
-    public static function moreThanOrEqualTo($test) {
+    public static function moreThanOrEqualTo($test)
+    {
         return $test >= 0;
     }
 }

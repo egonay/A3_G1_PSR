@@ -27,38 +27,42 @@ class DateTimeValidator extends DateTime
 
     /**
      * @param \DateTime $datetime
-     * @param $test
+     * @param \DateTime $test
      * @return bool
      */
-    public static function isRightDate($datetime, $test) {
+    public static function isRightDate($datetime, $test)
+    {
         return $datetime === $test;
     }
 
     /**
      * @param \DateTime $datetime
-     * @param $test
+     * @param \DateTime $test
      * @return bool
      */
-    public static function isAbove($datetime, $test) {
+    public static function isAbove($datetime, $test)
+    {
         return $datetime > $test;
     }
 
     /**
      * @param \DateTime $datetime
-     * @param $test
+     * @param \DateTime $test
      * @return bool
      */
-    public static function isLess($datetime, $test) {
+    public static function isLess($datetime, $test)
+    {
         return $datetime < $test;
     }
 
     /**
      * @param \DateTime $datetime
-     * @param $test
-     * @param $test2
+     * @param \DateTime $test
+     * @param \DateTime $test2
      * @return bool
      */
-    public static function isBetween($datetime, $test, $test2) {
+    public static function isBetween($datetime, $test, $test2)
+    {
         return $test < $datetime && $datetime < $test2;
     }
 }
