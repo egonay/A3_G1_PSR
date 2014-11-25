@@ -8,12 +8,13 @@
 
 namespace Php\Validator;
 
+use DateTime;
 
-class DateTimeValidator
+class DateTimeValidator extends DateTime
 {
-    public static function isDateNow($now, $date){
-        return $now === $date;
+    public static function isDateFormat($date)
+    {
+        $datetime = DateTime::createFromFormat('Y-m-d', $date);
+        return $datetime && $datetime->format('Y-m-d') === $date;
     }
-
-
 } 

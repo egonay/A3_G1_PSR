@@ -17,12 +17,19 @@ use Php\Validator\DateTimeValidator;
  */
 class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 {
-    /*
-    public function testDateTimeValidatorisNow()
+    public function testDateTimeValidatorIsDateFormatTrue()
     {
-        $date = "2014-11-25";
-        $datetime = new DateTime($date);
-        echo $datetime->format('Y-m-d');
+        $date = "2014-10-22";
+        $result = DateTimeValidator::isDateFormat($date);
+
+        $this->assertTrue($result);
     }
-    */
+
+    public function testDateTimeValidatorIsDateFormatFalse()
+    {
+        $date = "2014-13-37";
+        $result = DateTimeValidator::isDateFormat($date);
+
+        $this->assertFalse($result);
+    }
 } 
