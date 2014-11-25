@@ -20,8 +20,7 @@ class StringValidator
      * @param $test
      * @return bool
      */
-    public static function length($string, $test)
-    {
+    public static function length($string, $test) {
         return strlen($string) === $test;
     }
 
@@ -30,8 +29,7 @@ class StringValidator
      * @param $test
      * @return bool
      */
-    public static function lengthIsMoreThan($string, $test)
-    {
+    public static function lengthIsMoreThan($string, $test) {
         return strlen($string) > $test;
     }
 
@@ -40,8 +38,7 @@ class StringValidator
      * @param $test
      * @return bool
      */
-    public static function lengthIsLessThan($string, $test)
-    {
+    public static function lengthIsLessThan($string, $test) {
         return strlen($string) < $test;
     }
 
@@ -51,8 +48,7 @@ class StringValidator
      * @param $test2
      * @return bool
      */
-    public static function lengthIsBetween($string, $test, $test2)
-    {
+    public static function lengthIsBetween($string, $test, $test2) {
         return $test < strlen($string) && strlen($string) < $test2;
     }
 
@@ -60,8 +56,7 @@ class StringValidator
      * @param $string
      * @return bool
      */
-    public static function noSpaceAtBeginningAndEnd($string)
-    {
+    public static function noSpaceAtBeginningAndEnd($string) {
         $string2 = trim($string, ' ');
         return $string === $string2;
     }
@@ -70,8 +65,7 @@ class StringValidator
      * @param $string
      * @return bool
      */
-    public static function noSpaceAtAll($string)
-    {
+    public static function noSpaceAtAll($string) {
         $string2 = trim($string);
         return $string === $string2;
     }

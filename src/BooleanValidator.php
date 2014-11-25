@@ -19,7 +19,7 @@ class BooleanValidator
      * @param $boolean
      * @return bool
      */
-    public static function isTrue($boolean){
+    public static function isTrue($boolean) {
         return $boolean === true;
     }
 
@@ -27,7 +27,7 @@ class BooleanValidator
      * @param $boolean
      * @return bool
      */
-    public static function isFalse($boolean){
+    public static function isFalse($boolean) {
         return $boolean === true;
     }
 }

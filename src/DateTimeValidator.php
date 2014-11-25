@@ -12,19 +12,16 @@ use DateTime;
 
 class DateTimeValidator extends DateTime
 {
-    public static function isDateFormat($date)
-    {
+    public static function isDateFormat($date) {
         $datetime = DateTime::createFromFormat('Y-m-d', $date);
         return $datetime && $datetime->format('Y-m-d') == $date;
     }
 
-    public static function isRightDate($datetime, $test)
-    {
+    public static function isRightDate($datetime, $test) {
         return $datetime === $test;
     }
 
-    public static function isAbove($datetime, $test)
-    {
+    public static function isAbove($datetime, $test) {
         return $datetime > $test;
     }
 }

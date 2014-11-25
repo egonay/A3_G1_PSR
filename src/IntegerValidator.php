@@ -20,7 +20,7 @@ class IntegerValidator
      * @param $test
      * @return bool
      */
-    public static function equal($integer, $test){
+    public static function equal($integer, $test) {
         return $integer === $test;
     }
 
@@ -29,8 +29,7 @@ class IntegerValidator
      * @param $test
      * @return bool
      */
-    public static function above($integer, $test)
-    {
+    public static function above($integer, $test) {
         return $integer > $test;
     }
 
@@ -39,8 +38,7 @@ class IntegerValidator
      * @param $test
      * @return bool
      */
-    public static function less($integer, $test)
-    {
+    public static function less($integer, $test) {
         return $integer < $test;
     }
 
@@ -50,8 +48,7 @@ class IntegerValidator
      * @param $test2
      * @return bool
      */
-    public static function between($integer, $test, $test2)
-    {
+    public static function between($integer, $test, $test2) {
         return $test < $integer && $integer < $test2;
     }
 
@@ -59,8 +56,7 @@ class IntegerValidator
      * @param $test
      * @return bool
      */
-    public static function lessThanOrEqualTo($test)
-    {
+    public static function lessThanOrEqualTo($test) {
         return $test <= 0;
     }
 
@@ -68,8 +64,7 @@ class IntegerValidator
      * @param $test
      * @return bool
      */
-    public static function moreThanOrEqualTo($test)
-    {
+    public static function moreThanOrEqualTo($test) {
         return $test >= 0;
     }
 }
