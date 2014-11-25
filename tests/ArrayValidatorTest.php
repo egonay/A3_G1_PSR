@@ -143,10 +143,13 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($result);
     }
 
+
+    /* test marche pas */
     public function testKeyExistsTrue()
     {
         $array = array("Hello", "World");
-        $result = ArrayValidator::keyExists("World", $array);
+        $key = "World";
+        $result = ArrayValidator::keyExists($key, $array);
 
         $this->assertTrue($result);
     }
